@@ -12,23 +12,24 @@
         <div id="loader"></div>
         <div style="display:none;" id="myDiv" class="animate-bottom">
         <!-- loader end -->
-    <nav class="navbar"> 
-        <div class="innavbar">
-            <nav class="logo">
-                <img src="./hi logo.png" alt=""></nav>
-            <nav class="nav-links" id="navLinks"> 
-                <li><a href="#home">HOME</a></li>
+        <header class="header" id="navigation-menu">
+            <nav class="navbar">
+             <div class="logo">
+                 <img style="width: 100px; height: 60px;" src="./hi logo.png" alt="">
+             </div>
+              <ul class="nav-menu">
+                <li><a href="./index.html">HOME</a></li>
                 <li><a href="./about.html">ABOUT</a></li>
                 <li><a href="./jobs.html">JOBS</a></li>
                 <li><a href="Tel:08160528863"><button class="contact-btn">CONTACT US</button></a></li>
-            </nav> 
-        </div> 
-        <div class="burger" id="burger"> 
-            <div class="line1"></div> 
-            <div class="line2"></div> 
-            <div class="line3"></div> 
-        </div> 
-    </nav> 
+              </ul>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+        </header>
     <div id="home">
         <div class="in-home">
             <h3>GRAPHIC DESIGN</h3>
@@ -105,7 +106,7 @@
         <div class="in-contact">
             <div class="company">
                <h3>COMPANY</h3>
-                <a href="">ABOUT US</a><br>
+                <a href="./about.html">ABOUT US</a><br>
                 <a href="">CONTACT US</a><br>
                 <a href="">TERMS OF SERVICES</a><br>
             </div>
@@ -130,9 +131,6 @@
                 <a href="">MARKETING</a><br>
                 <a href="">DESIGN</a>
             </div>
-        </div>
-        <div class="sadik">
-            ©2023 All rights reserved, hi creative tech® is a registered trademark
         </div>
     </div>
     
@@ -166,5 +164,27 @@
     //         window.location="http:www.sadik.com"
     //     }
     </script>
+
+
+<script>
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+hamburger.classList.toggle("active");
+navMenu.classList.toggle("active");
+}
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
+}
+
+</script>
 </body>
 </html>

@@ -12,22 +12,24 @@
     <div id="loader"></div>
     <div style="display:none;" id="myDiv" class="animate-bottom">
     <!-- loader end -->
-    <nav class="navbar"> 
-        <div class="innavbar">
-            <nav class="logo"><img src="./hi logo.png" alt=""></nav>
-            <nav class="nav-links" id="navLinks"> 
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT</a></li>
-                <li><a href="./jobs.html">JOBS</a></li>
-                <li><a href="Tel:08160528863"><button class="contact-btn">CONTACT US</button></a></li>
-            </nav> 
-        </div> 
-        <div class="burger" id="burger"> 
-            <div class="line1"></div> 
-            <div class="line2"></div> 
-            <div class="line3"></div> 
-        </div> 
-    </nav> 
+    <header class="header" id="navigation-menu">
+      <nav class="navbar">
+       <div class="logo">
+           <img style="width: 100px; height: 60px;" src="./hi logo.png" alt="">
+       </div>
+        <ul class="nav-menu">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./jobs.html">JOBS</a></li>
+          <li><a href="Tel:08160528863"><button class="contact-btn">CONTACT US</button></a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+  </header>
     <div id="home">
         <div class="in-home">
             <h1>ABOUT US</h1>
@@ -43,7 +45,7 @@
                     <img src="./laptop.jpg" alt="">
                 </div>
                 <div class="first">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt aliquam harum dicta officia illo reprehenderit nostrum aperiam reiciendis dolores est minima molestiae, praesentium quod rem similique quas voluptatibus hic porro dolor corrupti itaque iusto distinctio libero facilis! Saepe laborum ratione voluptatibus sapiente dolorem beatae vero deserunt numquam labore quo, vel eveniet rerum distinctio eligendi voluptatem delectus a fugit omnis. Numquam.</p>
+                    <p>HI Creative stay abreast of industry trends and innovations to ensure their work remains relevant and competitive. This includes keeping up with advancements in design software, emerging design techniques, sustainability practices, and evolving consumer preferences.  Many design companies prioritize ethical and sustainable practices in their work, considering factors such as environmental impact, social responsibility, accessibility, and inclusivity in design solutions.</p>
                 </div>
             </div>
           <div class="team">
@@ -124,9 +126,7 @@
         </div>
     </div>
     
-    <div class="sadik">
-        ©2023 All rights reserved, hi creative tech® is a registered trademark
-    </div>
+  
     
     
     <div onclick="scrollToTop()" class="scrollTop">Top</div>
@@ -155,6 +155,26 @@
     //     else{
     //         window.location="http:www.sadik.com"
     //     }
+    </script>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click", mobileMenu);
+    
+    function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    }
+    const navLink = document.querySelectorAll(".nav-link");
+    
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+    
+    function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    }
+    
     </script>
 </body>
 </html>
