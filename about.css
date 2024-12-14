@@ -141,7 +141,6 @@ a {
 }
 
 
-
 @media only screen and (max-width: 900px) {
   .nav-menu {
     display: block;
@@ -228,6 +227,7 @@ a {
 #alldecument{
     background-color: whitesmoke;
     color: rgb(61, 61, 61);
+    
 }
 .in-decument{
     width: 80%;
@@ -258,6 +258,7 @@ a {
     display: flex;
     flex-direction: row;
 }
+
 .first{
     display: flex;
     flex-direction: row;
@@ -367,6 +368,7 @@ div.desc {
 }
 .team h2{
     color:#006cc5;
+    padding-bottom:20px;
 }
    @media only screen and (max-width: 700px) {
         .responsive {
